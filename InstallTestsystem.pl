@@ -92,7 +92,7 @@ my %Config = (
 );
 
 # define some maintenance commands
-if ( $OTRSMajorVersion >= 5 ) {
+if ( $OTRSMajorVersion ge '5' ) {
     $Config{RebuildConfigCommand} = "su -c '$InstallDir/bin/otrs.Console.pl Maint::Config::Rebuild' -s /bin/bash otrs";
     $Config{DeleteCacheCommand}   = "su -c '$InstallDir/bin/otrs.Console.pl Maint::Cache::Delete' -s /bin/bash otrs";
 }
