@@ -159,8 +159,9 @@ my $ConfigInjectStr = <<"EOD";
     \$Self->{'Fred::ConsoleWidth'}    = '30%';
 
     # Misc
-    \$Self->{'Loader::Enabled::CSS'}  = 0;
-    \$Self->{'Loader::Enabled::JS'}   = 0;
+    \$Self->{'Loader::Enabled::CSS'}    = 0;
+    \$Self->{'Loader::Enabled::JS'}     = 0;
+    \$Self->{'Frontend::TemplateCache'} = 0;
 EOD
 
 $ConfigStr =~ s{\# \s* \$Self->\{CheckMXRecord\} \s* = \s* 0;}{$ConfigInjectStr}xms;
